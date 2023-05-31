@@ -27,7 +27,7 @@ const ContactForm = ({ closeForm, isOpen }: {closeForm: Function, isOpen:boolean
     const empty_form: ContactFormFields = { name: '', email: '', message: '' };
     const [formData, setFormData] = useState(empty_form);
     const variants = {
-        open: { x: -350, y: 100, scale: 1 },
+        open: { x: -300, y: 100, scale: 1 },
         closed: { x: 100, y: 100, scale: 0.5 },
     };
 
