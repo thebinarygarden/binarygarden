@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgWrap{
+    z-index: -1;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 1000px;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.contactForm{
+    position: absolute;
+}

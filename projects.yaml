@@ -1,0 +1,21 @@
+- projectName: 1
+  projectDescription: Object 1
+  projectSkills: ["python", "java"]
+  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
+  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  isLive: false
+- projectName: 1
+  projectDescription: Object 1
+  projectSkills: ["python", "java", "python", "java", "something really long"]
+  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
+  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  isLive: true
+- projectName: 1
+  projectDescription: Object 1
+  projectSkills: []
+  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
+  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+  isLive: true
