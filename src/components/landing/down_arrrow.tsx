@@ -13,7 +13,7 @@ const DownArrow = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <div className="absolute inset-0 flex justify-center items-center z-[-1] pt-52">
+            <div className="absolute inset-0 flex justify-center items-center z-[-1] mt-56">
             <Image
                 src= {themeSvg}
                 alt={""}

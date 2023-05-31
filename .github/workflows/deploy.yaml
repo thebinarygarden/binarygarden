@@ -31,13 +31,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE }}:${{ github.sha }}
+          tags: gcr.io/${{ secrets.PROJECT_ID }}/${{ env.IMAGE }}:${{ github.sha }}
           no-cache: true
 
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
         with:
-          project_id: ${{ env.PROJECT_ID }}
+          project_id: ${{ secrets.PROJECT_ID }}
 
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@v1
@@ -47,8 +47,9 @@ jobs:
       - name: Deploy to Google Cloud Run
         run: |
           gcloud run deploy binary-garden \
-          --image gcr.io/${{ env.PROJECT_ID }}/${{ env.IMAGE }}:${{ github.sha }} \
+          --image gcr.io/${{ secrets.PROJECT_ID }}/${{ env.IMAGE }}:${{ github.sha }} \
           --port=3000 \
           --region ${{ secrets.PROJECT_REGION }} \
           --allow-unauthenticated \
-          --set-secrets=EMAILJS_SERVICE_ID=EMAILJS_SERVICE_ID:1,EMAILJS_TEMPLATE_ID=EMAILJS_TEMPLATE_ID:1,EMAILJS_PUBLIC_KEY=EMAILJS_PUBLIC_KEY:1
+          --service-account ${{ secrets.PROJECT_SERVICE_ACCOUNT }}  \
+          --set-secrets=EMAILJS_SERVICE_ID=EMAILJS_SERVICE_ID:1,EMAILJS_TEMPLATE_ID=EMAILJS_TEMPLATE_ID:1,EMAILJS_PUBLIC_KEY=EMAILJS_PUBLIC_KEY:1,EMAILJS_PRIVATE_KEY=EMAILJS_PRIVATE_KEY:1

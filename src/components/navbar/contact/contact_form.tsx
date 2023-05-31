@@ -1,7 +1,27 @@
 "use client"
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import {sendEmail} from "@/components/navbar/contact/email_client";
+
+const sendEmail = async (formData: ContactFormFields) => {
+    try {
+        const response = await fetch('/api/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+            const data = await response.json(); // this is the response from your API route
+            console.log('Email sent:', data);
+        }
+    } catch (error) {
+        console.error("There was a problem with the fetch operation: ", error);
+    }
+};
 
 const ContactForm = ({ closeForm, isOpen }: {closeForm: Function, isOpen:boolean}) => {
     const empty_form: ContactFormFields = { name: '', email: '', message: '' };
