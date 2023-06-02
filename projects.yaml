@@ -1,21 +1,21 @@
-- projectName: 1
-  projectDescription: Object 1
-  projectSkills: ["python", "java"]
-  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
-  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
-  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+- projectName: Disciplines Tree
+  projectDescription: More information coming soon
+  projectSkills: ["Typescript"]
+  videoLink: https://binarygarden.com/inprogress
+  repoLink: https://binarygarden.com/inprogress
+  liveLink: https://binarygarden.com/inprogress
   isLive: false
-- projectName: 1
-  projectDescription: Object 1
-  projectSkills: ["python", "java", "python", "java", "something really long"]
-  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
-  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
-  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+- projectName: The Coolest Pong
+  projectDescription: "<b>Controls</b> up: <b>W</b> left: <b>A</b> down: <b>S</b> right: <b>D</b><br/><br/>This video and it's software were created during the 2020 lockdown for a different project. The content is being repur posed to showcase the format for the Binary Garden. While the structure aligns with our upcoming project, expect notable differences in aesthetic, humor, and presentation style. View this as a sneak peek into Binary Gardens' framework, not its content. We're excited to bring you a fresh experience soon."
+  projectSkills: ["Unity", "C#"]
+  videoLink: https://www.youtube.com/embed/iteoM06O2xk
+  repoLink: https://github.com/notEduardo/TheCoolestPong
+  liveLink: https://thecoolestpong-q6jviphbza-uc.a.run.app
   isLive: true
-- projectName: 1
-  projectDescription: Object 1
-  projectSkills: []
-  videoLink: https://www.youtube.com/embed/uT5bQLZy0Ps
-  repoLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
-  liveLink: https://www.youtube.com/watch?v=uT5bQLZy0Ps
+- projectName: The Coolest Mario
+  projectDescription: "<b>Controls</b> up: <b>W</b> left: <b>A</b> down: <b>S</b> right: <b>D</b> jump: <b>SPACE</b> fire: <b>Mouse Click</b><br/><br/>This video and it's software were created during the 2020 lockdown for a different project. The content is being repur posed to showcase the format for the Binary Garden. While the structure aligns with our upcoming project, expect notable differences in aesthetic, humor, and presentation style. View this as a sneak peek into Binary Gardens' framework, not its content. We're excited to bring you a fresh experience soon."
+  projectSkills: ["Unity", "C#"]
+  videoLink: https://www.youtube.com/embed/qWvt5N53_zQ
+  repoLink: https://github.com/notEduardo/TheCoolestMario
+  liveLink: https://thecoolestmario-q6jviphbza-uc.a.run.app
   isLive: true
