@@ -2,6 +2,7 @@ import { load } from 'js-yaml';
 import fs from 'fs';
 import ProjectCard from "@/components/content/project_card";
 import ProjectCardIcons from "@/components/content/project_card_icons";
+import IconLegened from "@/components/content/icon_legend";
 
 export default function BGContent() {
     const objects:ProjectCard[] = load(fs.readFileSync('./projects.yaml', 'utf8')) as ProjectCard[];
@@ -9,6 +10,7 @@ export default function BGContent() {
     return (
         <div className="flex flex-col items-center bg-transparent pt-40 m-2 text-[#0B1121] dark:text-[#F8FAFC]">
             <h1 className="text-4xl font-bold mb-6 text-center">Projects</h1>
+            <IconLegened />
             <ul className="space-y-5 max-w-xl">
                 {objects.map((object, index) => (
                     <li

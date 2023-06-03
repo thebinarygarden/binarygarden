@@ -20,7 +20,7 @@ const ProjectCardIcons = ({repoLink, liveLink, isLive}: {
                     alt={""}
                     width={0}
                     height={0}
-                    className="h-6 w-6 mb-2"
+                    className="h-6 w-6 mb-2 shadow-md shadow-[#48EDFF] dark:shadow-[#87ACFD]"
                 />
             </a>
             <a href={repoLink}>
@@ -29,7 +29,7 @@ const ProjectCardIcons = ({repoLink, liveLink, isLive}: {
                     alt={""}
                     width={0}
                     height={0}
-                    className="h-6 w-6 mb-2"
+                    className="h-6 w-6 mb-2 shadow-md shadow-[#48EDFF] dark:shadow-[#87ACFD]"
                 />
             </a>
         </div>
