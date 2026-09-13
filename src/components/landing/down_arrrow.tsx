@@ -1,27 +1,17 @@
 "use client"
-import Image from 'next/image'
-import dynamic from "next/dynamic";
-import {useTheme} from "next-themes";
 import { motion } from "framer-motion";
+import { IconArrow } from "@binarygarden/flora/icons";
 
-const DownArrow = () => {
-    const { theme } = useTheme();
-    const themeSvg = theme === "dark" ? "/svg/chevron-double-down-dark.svg" : "/svg/chevron-double-down.svg";
+export default function DownArrow() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
-            <div className="absolute inset-0 flex justify-center items-center z-[-1] mt-80">
-            <Image
-                src= {themeSvg}
-                alt={""}
-                width={0}
-                height={0}
-                className="h-14 w-14" />
+            <div className="absolute inset-0 flex justify-center items-center z-[-1] mt-80 text-(--on-background)">
+                <IconArrow orientation="down" size={56} />
             </div>
         </motion.div>
     );
 }
-export default dynamic(() => Promise.resolve(DownArrow), {ssr: false});
