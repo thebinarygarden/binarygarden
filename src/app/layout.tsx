@@ -1,5 +1,6 @@
 import './globals.css'
-import BgThemeProvider from "@/app/bgThemeProvider";
+import { ThemeProvider, ScriptPreloadTheme } from '@binarygarden/flora/theme';
+import { lightTheme, darkTheme } from '@/app/themes';
 
 export const metadata = {
   title: 'Binary Garden',
@@ -9,10 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
       <html lang="en" suppressHydrationWarning>
-      <body className={"bg-[#F8FAFC] dark:bg-[#0B1121]"}>
-      <BgThemeProvider>
+      <head>
+          <ScriptPreloadTheme lightTheme={lightTheme} darkTheme={darkTheme} />
+      </head>
+      <body className={"bg-(--background)"}>
+      <ThemeProvider lightTheme={lightTheme} darkTheme={darkTheme}>
           {children}
-      </BgThemeProvider>
+      </ThemeProvider>
       <br/><br/><br/>
       </body>
     </html>

@@ -3,19 +3,20 @@ import fs from 'fs';
 import ProjectCard from "@/components/content/project_card";
 import ProjectCardIcons from "@/components/content/project_card_icons";
 import IconLegened from "@/components/content/icon_legend";
+import { Badge } from "@binarygarden/flora/ui";
 
 export default function BGContent() {
     const objects:ProjectCard[] = load(fs.readFileSync('./projects.yaml', 'utf8')) as ProjectCard[];
 
     return (
-        <div className="flex flex-col items-center bg-transparent pt-40 m-2 text-[#0B1121] dark:text-[#F8FAFC]">
+        <div className="flex flex-col items-center bg-transparent pt-40 m-2 text-(--on-background)">
             <h1 className="text-4xl font-bold mb-6 text-center">Projects</h1>
             <IconLegened />
             <ul className="space-y-5 max-w-xl">
                 {objects.map((object, index) => (
                     <li
                         key={index}
-                        className="bg-[#F8FAFC] dark:bg-[#0B1121] shadow-md shadow-[#48EDFF] dark:shadow-[#87ACFD] rounded-xl flex flex-col p-3"
+                        className="bg-(--background) shadow-md shadow-(color:--primary) rounded-xl flex flex-col p-3"
                     >
                         {/* First section - link to YouTube video */}
                         <iframe
@@ -39,10 +40,10 @@ export default function BGContent() {
                                         <ProjectCardIcons repoLink={object.repoLink} liveLink={object.liveLink} isLive={object.isLive} />
                                     </div>
                                 </div>
-                                <div className="mb-2 text-lg text-gray-700/80 dark:text-gray-100/70" dangerouslySetInnerHTML={{ __html: object.projectDescription }} />
+                                <div className="mb-2 text-lg text-(--on-surface)" dangerouslySetInnerHTML={{ __html: object.projectDescription }} />
                                 <div className="grid grid-cols-3 gap-3">
                                     {object.projectSkills.map((skill, tagIndex) => (
-                                        <span key={tagIndex} className="bg-gray-500/20 dark:bg-gray-500/50 rounded px-2 py-1 text-xs text-center">{skill}</span>
+                                        <Badge key={tagIndex} variant="surfaceVariant" size="small" className="text-center">{skill}</Badge>
                                     ))}
                                 </div>
                             </div>
