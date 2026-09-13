@@ -1,10 +1,11 @@
-# the Binary Garden
+# Binary Garden
 
 ## Getting Started
 
-### NPM
+### PNPM
 ```bash
-npm run dev
+pnpm i
+pnpm dev
 ```
 
 ### Docker 
